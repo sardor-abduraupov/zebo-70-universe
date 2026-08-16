@@ -65,7 +65,7 @@ export function Games({ onBack }: { onBack: () => void }) {
   const [picked, setPicked] = useState<number | null>(null);
 
   const done = i >= ALL.length;
-  const q = ALL[Math.min(i, ALL.length - 1)];
+  const q = ALL[Math.min(i, ALL.length - 1)]!;
   const percent = Math.round((score / ALL.length) * 100);
 
   const pick = (idx: number) => {
